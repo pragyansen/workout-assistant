@@ -1,0 +1,79 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Workout_Assitant.profile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+        	<shell:ApplicationBarIconButton IconUri="/icons5/appbar.save.rest.png" Text="Save" Click = "save_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Profile" Style="{StaticResource PhoneTextNormalStyle}" FontSize="26.667" Height="47"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="16,0,8,0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.827,0.121" StartPoint="0.093,0.948">
+                    <GradientStop Color="#FF666585" Offset="0.105"/>
+                    <GradientStop Color="#FF474864" Offset="0.928"/>
+                    <GradientStop Color="#FF8F92C4" Offset="0.526"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="47" Margin="24,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Text="Name:" FontSize="26.667" FontWeight="Bold">
+				<TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="Black" Offset="1"/>
+						<GradientStop Color="#FF3D2C2C" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground>
+            </TextBlock>
+            <TextBox x:Name="textBox" Height="83" Margin="113,11,8,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock_age" HorizontalAlignment="Left" Height="47" Margin="24,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Text="Age:" FontSize="26.667" FontWeight="Bold">
+				<TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="Black" Offset="1"/>
+						<GradientStop Color="#FF3D2C2C" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground>
+            </TextBlock>
+            <TextBox x:Name="textBox_age" InputScope="Number" Height="83" Margin="113,115,8,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock_height" HorizontalAlignment="Left" Height="47" Margin="24,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Text="Height:" FontSize="26.667" FontWeight="Bold">
+				<TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="Black" Offset="1"/>
+						<GradientStop Color="#FF3D2C2C" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground>
+            </TextBlock>
+            <TextBox x:Name="textBox_height" InputScope="Number" Margin="121,221,8,300" TextWrapping="Wrap"/>
+            <TextBlock x:Name="textBlock_weight" HorizontalAlignment="Left" Height="47" Margin="20,0,0,228" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="105" Text="Weight:" FontSize="26.667" d:LayoutOverrides="VerticalAlignment" FontWeight="Bold">
+				<TextBlock.Foreground>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="Black" Offset="1"/>
+						<GradientStop Color="#FF3D2C2C" Offset="1"/>
+					</LinearGradientBrush>
+				</TextBlock.Foreground>
+            </TextBlock>
+            <TextBox x:Name="textBox_weight" InputScope="Number" Margin="125,0,8,213" TextWrapping="Wrap" Height="83" VerticalAlignment="Bottom"/>
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>
